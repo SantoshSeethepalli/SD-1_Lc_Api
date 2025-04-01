@@ -13,7 +13,7 @@ const fetchLeetCodeStats = async (username) => {
 
         const response = await axios.get(url);
 
-        if (response.data.errors || !response.data.data.matchedUser) {
+        if (response.data.errors) {
             console.log("LeetCode API responded with errorr: username not found");
             return null;
         }
